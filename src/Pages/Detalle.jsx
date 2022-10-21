@@ -25,8 +25,7 @@ function Detalle(){
         [id]
     )
 
-    let img = producto.pictures.map((a) => a.url)
-    console.log(img)
+/*     let img = producto.pictures.map((a) => a.url) */
 
 
 
@@ -35,8 +34,10 @@ function Detalle(){
             <h1>Detalle</h1>
 
             <h2>{producto.title}</h2>
-            <img src={img} alt="" />
+            <img src={producto.thumbnail} alt="" />
+            <p>{producto.descriptions}</p>
             <p>{'$ '+ producto.price}</p>
+            <button>Comprar</button>
         </>
     )
 }
