@@ -72,7 +72,7 @@ h2{
 .navbar-balloon{
   position: relative;
   top: 30px;
-  left: 48px;
+  left: 55px;
 }
 
 .navbar-ship{
@@ -98,7 +98,7 @@ h2{
   text-decoration: none !important;
   font-family: 'Cinzel' !important;
   font-size: 14px !important;
-  padding: 5px;
+  margin-left: 10px;
 }
 
 .navbar-link:hover{

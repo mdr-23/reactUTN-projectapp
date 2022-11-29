@@ -28,7 +28,6 @@ function Productos(){
         <section className="section-yellow">
             <h2 className="text-center king">KING</h2>
             <div className="mt-5 text-center">
-                <label className="buscar mx-2">Buscar: </label>
                 <input className="input-buscar" type="text" value={buscar} onChange={(event=>setBuscar(event.target.value))} />
             </div>
             

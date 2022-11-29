@@ -50,19 +50,19 @@ function NavBar(){
                   <img src={require('../img/vampiro.png')} height="20" className="navbar-vampire" style={{color: "#fff !important"}} alt="Ícono de un vampiro" />
                 </div>
             )}
-              <Nav.Link onMouseEnter={() => setShowBalloon(true)} onMouseLeave={() => setShowBalloon(false)}><Link className="navbar-link" to='/'>INICIO</Link></Nav.Link>
+              <Nav.Link as={Link} className="navbar-link" to='/' onMouseEnter={() => setShowBalloon(true)} onMouseLeave={() => setShowBalloon(false)}>INICIO</Nav.Link>
               {
                 !context.login &&
                 <>
-                  <Nav.Link onMouseEnter={() => setShowShip(true)} onMouseLeave={() => setShowShip(false)}><Link className="navbar-link" to='/login'>INICIAR SESIÓN</Link></Nav.Link>
-                  <Nav.Link onMouseEnter={() => setShowCujo(true)} onMouseLeave={() => setShowCujo(false)}><Link className="navbar-link" to='/registro'>REGISTRARSE</Link></Nav.Link>
+                  <Nav.Link as={Link} className="navbar-link" to='/login' onMouseEnter={() => setShowShip(true)} onMouseLeave={() => setShowShip(false)}>INICIAR SESIÓN</Nav.Link>
+                  <Nav.Link as={Link} className="navbar-link" to='/registro' onMouseEnter={() => setShowCujo(true)} onMouseLeave={() => setShowCujo(false)}>REGISTRARSE</Nav.Link>
                 </>
               }
               {
                 context.login &&
                 <>
-                  <Nav.Link onClick={context.handleLogout} onMouseEnter={() => setShowShip(true)} onMouseLeave={() => setShowShip(false)}><Link className="navbar-link">CERRAR SESIÓN</Link></Nav.Link>
-                  <Nav.Link onMouseEnter={() => setShowVampire(true)} onMouseLeave={() => setShowVampire(false)}><Link className="navbar-link" to='/productos/alta'>ALTA PRODUCTOS</Link></Nav.Link>
+                  <Nav.Link as={Link} className="navbar-link" onClick={context.handleLogout} onMouseEnter={() => setShowShip(true)} onMouseLeave={() => setShowShip(false)}>CERRAR SESIÓN</Nav.Link>
+                  <Nav.Link as={Link} className="navbar-link" to='/productos/alta' onMouseEnter={() => setShowVampire(true)} onMouseLeave={() => setShowVampire(false)}>ALTA PRODUCTOS</Nav.Link>
                 </>
               }
             </Nav>
@@ -70,13 +70,6 @@ function NavBar(){
         </Container>
       </Navbar>
     )
-
-/*         <ul>
-            <li><Link to='/'>Inicio</Link></li>
-            <li><Link to='/login'>Login</Link></li>
-            <li><Link to='/registro'>Registro</Link></li>
-        </ul>
-    ) */
 }
 
 export default NavBar
