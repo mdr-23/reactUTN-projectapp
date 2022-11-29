@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+/* Zoom-in animation */
+.zoom-in{
+  animation: zoom-in 400ms;
+}
+@keyframes zoom-in {
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.0);
+  }
+}
+
 body{
   background-color: rgb(32, 32, 32) !important;
 }
@@ -41,7 +54,7 @@ h2{
 
 .navbar{
   background-color: rgb(32, 32, 32) !important;
-  padding: 20px 150px !important;
+  padding: 50px 150px !important;
 }
 
 .brand{
@@ -77,7 +90,7 @@ h2{
 .navbar-vampire{
   position: relative;
   top: 30px;
-  left: 415px !important;
+  left: 295px !important;
 }
 
 .navbar-link{
@@ -220,4 +233,67 @@ h2{
   color: #fff;
   font-family: 'Cinzel' !important;
   margin-top: -15px;
+}
+
+
+/* /////////////////////////////////////////////////////////////////// */
+/* CHECKOUT PAGE */
+/* /////////////////////////////////////////////////////////////////// */
+
+.checkout-page{
+  background-color: rgb(242, 205, 77);
+  margin-left: 400px !important;
+}
+
+.checkout-img{
+  position: relative;
+  left: 150px;
+}
+
+.checkout-title{
+  color: rgb(32, 32, 32) !important;
+  margin-bottom: -5.5px !important;
+  font-weight: bolder !important;
+  font-size: 30px !important;
+  font-family: 'Cinzel';
+}
+
+.checkout-precio{
+  color: rgb(32, 32, 32) !important;
+  font-size: 30px !important;
+  font-family: 'Cinzel';
+  margin-top: -28px;
+}
+
+.checkout-valor{
+  color: rgb(160, 11, 11) !important;
+  margin-bottom: -5.5px !important;
+  font-size: 30px !important;
+  font-family: 'Cinzel';
+}
+
+.modal-bg{
+  background-color: rgb(242, 205, 77) !important;
+}
+
+.modal-header{
+  border-bottom: rgb(32, 32, 32) solid 1px !important;
+}
+
+.modal-title{
+  color: rgb(32, 32, 32);
+  font-family: 'Cinzel';
+  font-size: 28px !important;
+  font-weight: bold !important;
+}
+
+.modal-body{
+  color: rgb(32, 32, 32);
+  font-family: 'Cinzel';
+  font-size: 18px;
+  border-bottom: none !important;
+}
+
+.modal-footer{
+  border-top: rgb(32, 32, 32) solid 1px !important;
 }

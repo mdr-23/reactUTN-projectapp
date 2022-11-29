@@ -33,7 +33,7 @@ function Productos(){
             </div>
             
             <div className="d-flex flex-wrap wrap mx-5 justify-content-center">
-                {productos.map(producto => <Producto {... producto.data()} id={producto.id} />)}
+                {productos.map(producto => <Producto key={producto.id} {... producto.data()} id={producto.id} />)}
             </div>
         </section>
     )

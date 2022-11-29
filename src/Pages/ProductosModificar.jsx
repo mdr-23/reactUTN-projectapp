@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form"
-import firebase from '../Config/firebase'
 import { Form, Button, Card } from 'react-bootstrap';
 import { useParams } from "react-router-dom";
 import { useEffect } from "react"
@@ -26,6 +25,7 @@ function ProductosModificar(){
             }
             result()
         },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [id]
     )
 

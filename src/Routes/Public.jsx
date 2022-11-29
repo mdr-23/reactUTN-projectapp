@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom"
+import Checkout from "../Pages/Checkout"
 import Detalle from "../Pages/Detalle"
 import Home from "../Pages/Home"
 import Login from "../Pages/Login"
@@ -15,6 +16,7 @@ function Public(){
             <Route path='/registro' element={<Registro />} />
             <Route path='/productos/alta' element={<ProductosAlta />} />
             <Route path='/productos/editar/:id' element={<ProductosModificar />} />
+            <Route path='/checkout/:id' element={<Checkout />} />
         </Routes>
     )
 }

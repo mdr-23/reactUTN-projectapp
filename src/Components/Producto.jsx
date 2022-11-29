@@ -3,7 +3,7 @@ import { Button, Card } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 
-function Producto({title, id, name, price, image, description}){
+function Producto({id, name, price, image}){
 
     return(
 

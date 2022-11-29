@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <h2>Footer</h2>
+        <h2 className="mt-5 text-center">Footer</h2>
     )
 }
 

@@ -1,8 +1,15 @@
 import { useForm } from "react-hook-form"
 import firebase from '../Config/firebase'
-import { Form, Button, Card } from 'react-bootstrap';
+import { Form, Button, Card } from 'react-bootstrap'
+import { useState } from "react";
+import AlertCustom from "../Components/AlertCustom"
+import { registroMessage } from "../Utils/errorMessage"
+import { useNavigate } from 'react-router-dom'
 
 function Registro(){
+
+    const [alert, setAlert] = useState({variant:'', text:''})
+    const navigate = useNavigate()
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = async data => {
@@ -18,14 +25,22 @@ function Registro(){
                     userId: responseUser.user.uid
                 })
                 console.log(document)
+                if(document){
+                    setAlert({variant: 'success', text: "Gracias por registrarte. Tú también flotarás..."})
+                    setTimeout(()=>{
+                        navigate ("/login")
+                    },2000)
+                }
             }
         }catch(e){
-            console.log(e)
+            console.log(e.code)
+            setAlert({variant: 'danger', text: registroMessage[e.code] || "Ha ocurrido un error en el registro. Chequea que todos los campos sean correctos."})
         }
     }
 
     return(
 
+        <>
             <Card style={{ width: '22rem' }} className='mx-auto mt-5 card-login'>
                 <Card.Body>
                     <Card.Title className='login-title'>Registrarse</Card.Title>
@@ -65,9 +80,14 @@ function Registro(){
                                 Registrarse
                             </Button>
                         </Form>
+                        
                     </Card.Text>
                 </Card.Body>
             </Card>
+
+            <AlertCustom {...alert} />
+
+        </>
         
     )
 }

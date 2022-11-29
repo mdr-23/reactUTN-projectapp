@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react"
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { getProductosById } from "../Services/productosService"
-import { Button } from 'react-bootstrap'
 import Loading from "../Components/Loading/Loading"
+import PurchaseMessage from "../Components/PurchaseMessage"
 
-function Detalle(){
+function Checkout(){
 
     const {id} = useParams()
 
@@ -33,18 +33,18 @@ function Detalle(){
 
     return(
         <Loading loading={isLoading} >
-            <div className="row d-flex align-items-center justify-content-center container mx-auto p-5">
-                <div className="col-1">
-                    <img src={producto.image} className="detalle-img" alt="Portada del libro" />
+            <h1 className='detalle-title mt-5'>Detalle de la compra</h1>
+            <div className="row d-flex align-items-center checkout-page container mx-auto p-5">
+                <div className="col-4">
+                    <img src={producto.image} className="checkout-img" height="300" alt="Portada del libro" />
                 </div>
 
-                <div className="col-11">
-                    <h1 className="detalle-title">{producto.name}</h1>
-                    <div className="detalle-bg-amarillo">
-                        <p>{producto.description}</p>
-                        <div className="text-end">
-                            <p className="detalle-precio">{producto.price}</p>
-                            <Link to={`/checkout/${id}`}><Button className="detalle-btn">Comprar</Button></Link>
+                <div className="col-3">
+                    <h2 className="checkout-title">{producto.name}</h2>
+                    <div>
+                        <div className="mt-5">
+                            <p className="checkout-precio">Precio total: <span className="checkout-valor">{producto.price}</span></p>
+                            <PurchaseMessage />
                         </div>
                     </div>
                 </div>
@@ -53,4 +53,4 @@ function Detalle(){
     )
 }
 
-export default Detalle
+export default Checkout

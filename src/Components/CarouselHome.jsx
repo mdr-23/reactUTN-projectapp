@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 function CarouselHome() {
   return (
     <section>
-    <Carousel fade style={{ width: "80%" }} className="mx-auto">
+    <Carousel fade style={{ width: "90%" }} className="mx-auto">
         <Carousel.Item>
         <Link to={`/productos/WfpxApeJwyq5KgxVjQ6Y`}>
           <img
-            className="cardpro d-block w-100 img-thumbnail banner-home"
-            src="https://stephenking.com/images/banner/fairytale.gif"
-            alt="First slide"
+            className="cardpro d-block w-100 img-thumbnail"
+            src={require('../img/fairytale.gif')}
+            alt="Banner de Cuento de Hadas"
         />
         </Link>
         <Carousel.Caption></Carousel.Caption>
@@ -19,20 +19,20 @@ function CarouselHome() {
         <Carousel.Item>
         <Link to={`/productos/FzxxWtrjVOtjTvlEZSKs`}>
         <img
-            className="cardpro d-block w-100 img-thumbnail banner-home"
-            src="https://www.dreadcentral.com/wp-content/uploads/2021/01/Billy-Summers-Banner.jpg"
-            alt="First slide"
+            className="cardpro d-block w-100 img-thumbnail"
+            src={require('../img/billysummers.jpeg')}
+            alt="Banner de Billy Summers"
         />
         </Link>
         <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item> 
-        <Link to={`/productos/jj6di3FzKFJmWUcRGr2H`}>      
+        <Link to={`/productos/OAbYdb5fnawu3I4XyZGJ`}>      
         <img
-            className="cardpro d-block w-100 img-thumbnail banner-home"
-            src="https://the-bibliofile.com/wp-content/uploads/theoutsider2.jpg"
-            alt="First slide"
+            className="cardpro d-block w-100 img-thumbnail"
+            src={require('../img/theoutsider.jpeg')}
+            alt="Banner de El Visitante"
         />
         <Carousel.Caption></Carousel.Caption>
         </Link>
